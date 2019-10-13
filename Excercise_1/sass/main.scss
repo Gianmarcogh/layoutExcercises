@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+// Variables
+$baseColor_1R: 50;
+$baseColor_1G: 103;
+$baseColor_1B: 6;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container_1, .container_2, .container_3 {
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 134px;  
+    margin-left: 5px;
+    background-color: lightgray;
+}
+
+.container_1 {
+    
+}
+
+
+
