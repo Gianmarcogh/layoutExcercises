@@ -21,103 +21,55 @@ body {
     margin-left: 5px;
     background-color: lightgray;
 }
-
-.container_1 {
-    .base_1 {
-        background-color: hsl($baseColor1, 50%, 50%);
-    }
+@mixin generatePalette($color) {
     @for $i from 4 to 0 {
         @if $i == 4 {
             .box:nth-child(1) {
-                background-color: hsl($baseColor1, 50%-$i*5%, 50%+$i*6%);
+                background-color: hsl($color, 50%-$i*5%, 50%+$i*6%);
             }
         }
         @if $i == 3 {
             .box:nth-child(2) {
-                background-color: hsl($baseColor1, 50%-$i*5%, 50%+$i*6%);
+                background-color: hsl($color, 50%-$i*5%, 50%+$i*6%);
             }
         }
         @if $i == 2 {
             .box:nth-child(3) {
-                background-color: hsl($baseColor1, 50%-$i*5%, 50%+$i*6%);
+                background-color: hsl($color, 50%-$i*5%, 50%+$i*6%);
             }
         }
         @if $i == 1 {
             .box:nth-child(4) {
-                background-color: hsl($baseColor1, 50%-$i*5%, 50%+$i*6%);
+                background-color: hsl($color, 50%-$i*5%, 50%+$i*6%);
             }
         }
     }
     @for $i from 6 to 10 {
         .box:nth-child(#{$i}) {
-            background-color: hsl($baseColor1, 50%+$i*5%, 50%-$i*3%);
+            background-color: hsl($color, 50%+$i*5%, 50%-$i*3%);
         }
     }
+}
+.container_1 {
+    .base_1 {
+        background-color: hsl($baseColor1, 50%, 50%);
+    }
+    @include generatePalette($baseColor1);
 }
 .container_2 {
     .base_2 {
         background-color: hsl($baseColor2, 50%, 50%);
     }
-    @for $i from 4 to 0 {
-        @if $i == 4 {
-            .box:nth-child(1) {
-                background-color: hsl($baseColor2, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-        @if $i == 3 {
-            .box:nth-child(2) {
-                background-color: hsl($baseColor2, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-        @if $i == 2 {
-            .box:nth-child(3) {
-                background-color: hsl($baseColor2, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-        @if $i == 1 {
-            .box:nth-child(4) {
-                background-color: hsl($baseColor2, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-    }
-    @for $i from 6 to 10 {
-        .box:nth-child(#{$i}) {
-            background-color: hsl($baseColor2, 50%+$i*5%, 50%-$i*3%);
-        }
-    }
+    @include generatePalette($baseColor2);
 }
 .container_3 {
     .base_3 {
         background-color: hsl($baseColor3, 50%, 50%);
     }
-    @for $i from 4 to 0 {
-        @if $i == 4 {
-            .box:nth-child(1) {
-                background-color: hsl($baseColor3, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-        @if $i == 3 {
-            .box:nth-child(2) {
-                background-color: hsl($baseColor3, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-        @if $i == 2 {
-            .box:nth-child(3) {
-                background-color: hsl($baseColor3, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-        @if $i == 1 {
-            .box:nth-child(4) {
-                background-color: hsl($baseColor3, 50%-$i*5%, 50%+$i*6%);
-            }
-        }
-    }
-    @for $i from 6 to 10 {
-        .box:nth-child(#{$i}) {
-            background-color: hsl($baseColor3, 50%+$i*5%, 50%-$i*3%);
-        }
-    }
+    @include generatePalette($baseColor3);
 }
+
+
 
 
 
