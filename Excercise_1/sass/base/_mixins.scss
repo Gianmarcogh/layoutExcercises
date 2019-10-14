@@ -1,0 +1,12 @@
+@mixin generatePalette($color, $increment) {
+    @for $i from 0 to 5 {
+        .box:nth-child(#{$i}) {
+            background-color: darken($color, ($increment*4)-($i*$increment));
+        }
+    }
+    @for $i from 6 to 10 {
+        .box:nth-child(#{$i}) {
+            background-color: lighten($color, $i*$increment);
+        }
+    }
+}

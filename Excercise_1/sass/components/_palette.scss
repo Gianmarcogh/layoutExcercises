@@ -1,0 +1,18 @@
+.container_1 {
+    .base_1 {
+        background-color: $baseColor1;
+    }
+    @include generatePalette($baseColor1, 5);
+}
+.container_2 {
+    .base_2 {
+        background-color: $baseColor2
+    }
+    @include generatePalette($baseColor2, 5);
+}
+.container_3 {
+    .base_3 {
+        background-color: $baseColor3;
+    }
+    @include generatePalette($baseColor3, 5);
+}
