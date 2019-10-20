@@ -1,0 +1,28 @@
+.container{
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% auto;
+}
+
+.item1 {
+    grid-row: 1/3;
+}
+.links {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+@media (max-width: 1200px) {
+    @import './medias/large';
+}
+
+@media (max-width: 900px) {
+    @import './medias/medium';
+}
+
+@media (max-width: 600px) {
+    @import './medias/small';
+}
